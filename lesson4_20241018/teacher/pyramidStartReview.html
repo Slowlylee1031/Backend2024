@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pyramidStartReview</title>
+    <script>
+        var pattern = '';
+        for (var i = 3; i >= 0; i--) {
+            for (var j = i; j >= 0; j--) {
+                pattern += '*';
+            }
+            pattern += "\n";
+        }
+        console.log(pattern)
+
+        /*
+        try to print this
+            *
+          * * *
+        * * * * *
+        */
+
+        var pattern = '';
+        for (var i = 1; i <= 3; i++) {
+            var currentLine = "";
+            
+            for (var j = 1; j <= 5; j++) {
+                if (j >= 4 - i && j <= 2 + i) {
+                    currentLine += "*";
+                } else {
+                    currentLine += " ";
+                }
+            }
+            pattern += currentLine + "\n";
+        }
+        console.log(pattern);
+
+
+        /*
+        Good example for pramid star
+        https://stackoverflow.com/a/53170238
+
+        function generateNumberTriangle(v) {
+            for (var i = 1; i <= v; i++) {
+                var chars = " ";
+                for (var j = 1; j <= v; j++) {
+                    if (j <= i) { chars += j + "  "; }
+                }
+                console.log(chars);
+            }
+        }
+        generateNumberTriangle(7);
+
+        */
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
